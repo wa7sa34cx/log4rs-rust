@@ -1,3 +1,5 @@
+mod submod;
+
 fn main() {
     log4rs::init_file("logging.yaml", Default::default()).unwrap();
     
@@ -6,4 +8,8 @@ fn main() {
     log::info!("info");
     log::warn!("warn");
     log::error!("error");
+
+    submod::run();
+
+    
 }
